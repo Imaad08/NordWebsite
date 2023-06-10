@@ -1,0 +1,41 @@
+@keyframes slide-in-bottom {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .content,
+  .logo-image,
+  h1,
+  h2,
+  h3,
+  #learn-more-button {
+    animation: slide-in-bottom 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+  
+  .navbar button:nth-child(1),
+  .navbar button:nth-child(2),
+  .navbar button:nth-child(3),
+  .navbar button:nth-child(4),
+  .navbar button:nth-child(5) {
+    animation: slide-in-top 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+  

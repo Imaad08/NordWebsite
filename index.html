@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style2.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Coco+Gothic&display=swap');
+    
+    body {
+      background-color: #0D5180;
+      color: white;
+      font-family: "Coco Gothic", sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .navbar button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 5px;
+      position: relative;
+    }
+    
+    .navbar button::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -3px;
+      left: 50%;
+      background-color: white;
+      transform: translateX(-50%);
+      transition: width 0.3s ease-in-out;
+    }
+    
+    .navbar button:hover::after {
+      width: 100%;
+    }
+    
+    .content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: -70px;
+    }
+    
+    h1 {
+      font-family: "Coco Gothic", sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      margin: 0;
+    }
+    
+    h2 {
+      font-family: "Abhaya Libre", serif;
+      font-size: 50px;
+      font-weight: normal;
+      margin: 10px 0;
+    }
+    
+    h3 {
+      font-family: "Abhaya Libre", serif;
+      font-size: 25px;
+      margin: 5px 0;
+    }
+    
+    #learn-more-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: white;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 30px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    #learn-more-button:hover {
+      transform: scale(1.1);
+      background-color: black;
+      color: white;
+    }
+    .logo-image {
+        margin-bottom: 100px;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <button>HOME</button>
+    <button>ABOUT US</button>
+    <button>SUPPORT</button>
+    <button>CONTACT US</button>
+    <button>OUR MISSION</button>
+  </div>
+  <div class="content">
+    <img src="https://nordatncsu.files.wordpress.com/2021/03/cropped-nord_logo_wtag_wide_web_rgb.png" alt="Image" width="697" height="249" class = "logo-image">
+    <h1>DEL NORTE HIGH SCHOOL</h1>
+    <h2>NORD Students For Rare</h2>
+    <h3>Alone we are rare</h3>
+    <h3>Together we are strong</h3>
+    <a href="#" id="learn-more-button">LEARN MORE
