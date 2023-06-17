@@ -1,41 +1,124 @@
-@keyframes slide-in-bottom {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coco+Gothic&display=swap');
+
+body {
+  background-color: #0D5180;
+  color: white;
+  font-family: "Coco Gothic", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logo-image {
+  width: 100%; 
+  max-width: 300px; 
+  height: auto;
+  object-fit: cover;
+  margin-right: 10px; 
+  margin-bottom :-30px;
+  margin-left: -200px; 
+}
+@media only screen and (max-width: 480px) {
+  .logo-image {
+    max-width: 100px; 
+    margin-left: -50px;
   }
-  
-  @keyframes slide-in-top {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .content,
-  .logo-image,
-  h1,
-  h2,
-  h3,
-  #learn-more-button {
-    animation: slide-in-bottom 0.5s ease-out;
-    animation-fill-mode: both;
-  }
-  
-  .navbar button:nth-child(1),
-  .navbar button:nth-child(2),
-  .navbar button:nth-child(3),
-  .navbar button:nth-child(4),
-  .navbar button:nth-child(5) {
-    animation: slide-in-top 0.5s ease-out;
-    animation-fill-mode: both;
-  }
-  
+}
+
+
+.navbar button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px;
+  position: relative;
+}
+
+.navbar button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 50%;
+  background-color: white;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar button:hover::after {
+  width: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -70px;
+}
+
+h1 {
+  font-family: "Coco Gothic", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Abhaya Libre", serif;
+  font-size: 50px;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+h3 {
+  font-family: "Abhaya Libre", serif;
+  font-size: 25px;
+  margin: 5px 0;
+  position: relative;
+}
+
+h3::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -10px;
+  left: 0;
+  background-color: #ffa100;
+}
+
+#learn-more-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 30px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+#learn-more-button:hover {
+  transform: scale(1.1);
+  background-color: black;
+  color: white;
+}
