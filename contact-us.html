@@ -2,7 +2,6 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style2.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Coco+Gothic&display=swap');
@@ -21,11 +20,16 @@
     
     .navbar {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       margin-top: 20px;
     }
     
-    .navbar button {
+    .navbar img {
+      max-width: 300px;
+      height: auto;
+      margin-bottom: -100px;
+    }
+    .top-buttons button {
       background-color: transparent;
       color: white;
       border: none;
@@ -35,8 +39,7 @@
       margin: 0 5px;
       position: relative;
     }
-    
-    .navbar button::after {
+    .top-buttons button::after {
       content: "";
       position: absolute;
       width: 0;
@@ -48,66 +51,38 @@
       transition: width 0.3s ease-in-out;
     }
     
-    .navbar button:hover::after {
+    .top-buttons button:hover::after {
       width: 100%;
     }
-    
     .content {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-top: -70px;
+      margin-top: 5px;
     }
     
     h1 {
-      font-family: "Coco Gothic", sans-serif;
-      font-size: 13px;
-      font-weight: bold;
-      margin: 0;
-    }
-    
-    h2 {
       font-family: "Abhaya Libre", serif;
       font-size: 50px;
-      font-weight: normal;
-      margin: 10px 0;
-    }
-    
-    h3 {
-      font-family: "Abhaya Libre", serif;
-      font-size: 25px;
-      margin: 5px 0;
-    }
-    
-    #learn-more-button {
-      display: inline-block;
-      padding: 15px 30px;
-      background-color: white;
-      color: black;
-      font-size: 16px;
       font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 30px;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-    #learn-more-button:hover {
-      transform: scale(1.1);
-      background-color: black;
-      color: white;
-    }
-    .logo-image {
-        margin-bottom: -30px;
+      
     }
     
-
+    hr {
+      width: 175px;
+      height: 2px;
+      background-color: #ffa100;
+      border: none;
+      margin: 5px auto;
+      margin-top: -20px;
+    }
+    
+    
+   
   </style>
 </head>
 <body>
   <div class="navbar">
-    <img src="https://nordatncsu.files.wordpress.com/2021/03/cropped-nord_logo_wtag_wide_web_rgb.png" alt="Image" class="logo-image" style="display: inline;">
+    <img src="https://nordatncsu.files.wordpress.com/2021/03/cropped-nord_logo_wtag_wide_web_rgb.png" alt="Image" class="logo-image">
+  </div>
+  <div class="top-buttons">
     <button onclick="window.location.href = 'index.html'">HOME</button>
     <button onclick="window.location.href = 'our-team.html'">OUR TEAM</button>
     <button onclick="window.location.href = 'support.html'">SUPPORT</button>
@@ -115,8 +90,6 @@
     <button onclick="window.location.href = 'our-mission.html'">OUR MISSION</button>
   </div>
   <div class="content">
-    <h1>DEL NORTE HIGH SCHOOL
-    <h2>NORD Students For Rare</h2>
-    <h3>Alone we are rare</h3>
-    <h3>Together we are strong</h3>
-    <a href="#" id="learn-more-button">LEARN MORE
+    <h1>Contact Us</h1>
+    <hr>
+    
