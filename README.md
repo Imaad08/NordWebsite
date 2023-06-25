@@ -1,1 +1,1 @@
-# NordWebsite
+# Club website for NORD Students For RARE
