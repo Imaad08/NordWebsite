@@ -101,7 +101,18 @@
     .logo-image {
         margin-bottom: -30px;
     }
-    
+    @media only screen and (max-width: 480px) {
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo-image {
+        max-width: 200px;
+        margin-bottom: 10px;
+        margin-left: 0;
+      }
+    }
 
   </style>
 </head>
