@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Coco+Gothic&display=swap');
+    
+    body {
+      background-color: #0D5180;
+      color: white;
+      font-family: "Coco Gothic", sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+    
+    .navbar img {
+      max-width: 300px;
+      height: auto;
+      margin-bottom: -100px;
+    }
+    .top-buttons button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 0 5px;
+      position: relative;
+    }
+    .top-buttons button::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -3px;
+      left: 50%;
+      background-color: white;
+      transform: translateX(-50%);
+      transition: width 0.3s ease-in-out;
+    }
+    
+    .top-buttons button:hover::after {
+      width: 100%;
+    }
+    .content {
+      margin-top: 5px;
+    }
+    
+    h1 {
+      font-family: "Abhaya Libre", serif;
+      font-size: 50px;
+      font-weight: bold;
+      
+    }
+    
+    hr {
+      width: 175px;
+      height: 2px;
+      background-color: #ffa100;
+      border: none;
+      margin: 5px auto;
+      margin-top: -20px;
+    }
+    
+    
+   
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <img src="https://nordatncsu.files.wordpress.com/2021/03/cropped-nord_logo_wtag_wide_web_rgb.png" alt="Image" class="logo-image">
+  </div>
+  <div class="top-buttons">
+    <button onclick="window.location.href = 'index.html'">HOME</button>
+    <button onclick="window.location.href = 'our-team.html'">OUR TEAM</button>
+    <button onclick="window.location.href = 'support.html'">SUPPORT</button>
+    <button onclick="window.location.href = 'contact-us.html'">CONTACT US</button>
+    <button onclick="window.location.href = 'our-mission.html'">OUR MISSION</button>
+  </div>
+  <div class="content">
+    <h1>Our Mission</h1>
+    <hr>
+    
