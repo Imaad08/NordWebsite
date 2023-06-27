@@ -48,17 +48,6 @@ body {
   position: relative;
 }
 
-.navbar button::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -3px;
-  left: 50%;
-  background-color: white;
-  transform: translateX(-50%);
-  transition: width 0.3s ease-in-out;
-}
 
 .navbar button:hover::after {
   width: 100%;
