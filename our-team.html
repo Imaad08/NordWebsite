@@ -20,41 +20,8 @@
 
     .navbar {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       margin-top: 20px;
-    }
-
-    .navbar img {
-      max-width: 300px;
-      height: auto;
-      margin-bottom: -100px;
-    }
-
-    .top-buttons button {
-      background-color: transparent;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 14px;
-      cursor: pointer;
-      margin: 0 5px;
-      position: relative;
-    }
-
-    .top-buttons button::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -3px;
-      left: 50%;
-      background-color: white;
-      transform: translateX(-50%);
-      transition: width 0.3s ease-in-out;
-    }
-
-    .top-buttons button:hover::after {
-      width: 100%;
     }
 
     .content {
@@ -136,15 +103,46 @@
       outline: none;
     }
 
-    @media screen and (max-width: 768px) {
-      .image-container {
-        flex-wrap: wrap;
-      }
+    @media only screen and (max-width: 480px) {
+    .image-container {
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: flex-start; 
+    margin-top: 20px; 
+  }
 
-    .image-container .flip-container {
-      width: 100%;
-      margin: 75px;
-    }
+  .image-container .flip-container {
+    width: 100%;
+    margin: 75px;
+    display: flex; 
+    justify-content: center; 
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+ .logo-image {
+   width: 100%;
+    max-widthth: 300px;
+    height: auto;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .dropbtn {
+    margin: 0 5px;
+    align-self: center;
+    position: relative;
+  
+  }
+   .navbar button {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-top: 80px;
+  }
   }
 
       .navbar img {
@@ -152,28 +150,80 @@
         margin-bottom: 0;
       }
 
-      .top-right-image {
-        position: relative;
-        top: 0;
-        right: 0;
-        left: 0;
-        margin: 20px auto;
-        width: 150px;
-        height: auto;
-      }
     
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      align: center;
+      
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #0D5180;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropbtn {
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      margin: 0 5px;
+      position: relative;
+    }
+
+    .dropbtn::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: white transparent transparent transparent;
+    }
+    .dropdown-content a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .logo-image {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 200px;
+    margin-bottom: 0;
+  }
   </style>
 </head>
 <body>
   <div class="navbar">
-    <img src="https://nordatncsu.files.wordpress.com/2021/03/cropped-nord_logo_wtag_wide_web_rgb.png" alt="Image" class="logo-image">
+    <img src="https://nordatncsu.files.wordpress.com/2021/03/cropped-nord_logo_wtag_wide_web_rgb.png" alt="Image" class="logo-image" style="display: inline;">
+    <div class="dropdown">
+      <button class="dropbtn">Menu &#9662;</button>
+      <div class="dropdown-content">
+        <a href="index.html">HOME</a>
+        <a href="our-team.html">OUR TEAM</a>
+        <a href="support.html">SUPPORT</a>
+        <a href="contact-us.html">CONTACT US</a>
+        <a href="our-mission.html">OUR MISSION</a>
+      </div>
+    </div>
   </div>
-  <div class="top-buttons">
-    <button onclick="window.location.href = 'index.html'">HOME</button>
-    <button onclick="window.location.href = 'our-team.html'">OUR TEAM</button>
-    <button onclick="window.location.href = 'support.html'">SUPPORT</button>
-    <button onclick="window.location.href = 'contact-us.html'">CONTACT US</button>
-    <button onclick="window.location.href = 'our-mission.html'">OUR MISSION</button>
   </div>
   <div class="content">
     <h1>Our Team</h1>
