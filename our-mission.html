@@ -43,80 +43,9 @@
       margin-top: -20px;
     }
 
-    .image-container {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-
-    .image-container .flip-container {
-      perspective: 1000px;
-      width: 23%;
-      height: auto;
-      position: relative;
-    }
-
-    .image-container .flip-container .flipper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transform-style: preserve-3d;
-      transition: transform 0.5s;
-    }
-
-    .image-container .flip-container .front,
-    .image-container .flip-container .back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-    }
-
-    .image-container .flip-container .front {
-      transform: rotateY(0deg);
-    }
-
-    .image-container .flip-container .back {
-      transform: rotateY(180deg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(13, 81, 128, 0.8);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    .image-container .flip-container:hover .flipper {
-      transform: rotateY(180deg);
-    }
-
-    .image-container .flip-container:hover .back {
-      opacity: 1;
-    }
-
-    .image-container .flip-container img {
-      width: 100%;
-      height: auto;
-      outline: none;
-    }
-
+    
     @media only screen and (max-width: 480px) {
-    .image-container {
-    flex-wrap: wrap;
-    justify-content: center; 
-    align-items: flex-start; 
-    margin-top: 20px; 
-  }
-
-  .image-container .flip-container {
-    width: 100%;
-    margin: 75px;
-    display: flex; 
-    justify-content: center; 
-  }
+   
   .navbar {
     flex-direction: column;
     align-items: center;
