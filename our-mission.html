@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
@@ -43,48 +44,49 @@
       margin-top: -20px;
     }
 
-    
+
     @media only screen and (max-width: 480px) {
-   
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
 
- .logo-image {
-   width: 100%;
-    max-width: 300px;
-    height: auto;
-    top: 20px;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-  }
-
-  .dropbtn {
-    margin: 0 5px;
-    align-self: center;
-    position: relative;
-  
-  }
-   .navbar button {
-    padding: 5px 10px;
-    font-size: 16px;
-    margin-top: 80px;
-  }
-  }
-
-      .navbar img {
-        max-width: 200px;
-        margin-bottom: 0;
+      .navbar {
+        flex-direction: column;
+        align-items: center;
       }
 
-    
+      .logo-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        top: 20px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+      }
+
+      .dropbtn {
+        margin: 0 5px;
+        align-self: center;
+        position: relative;
+
+      }
+
+      .navbar button {
+        padding: 5px 10px;
+        font-size: 16px;
+        margin-top: 80px;
+      }
+    }
+
+    .navbar img {
+      max-width: 200px;
+      margin-bottom: 0;
+    }
+
+
     .dropdown {
       position: relative;
       display: inline-block;
       align: center;
-      
+
     }
 
     .dropdown-content {
@@ -92,7 +94,7 @@
       position: absolute;
       background-color: #0D5180;
       min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
 
@@ -118,7 +120,6 @@
     }
 
     .dropbtn::after {
-      content: "";
       position: absolute;
       top: 50%;
       right: 10px;
@@ -127,21 +128,34 @@
       border-width: 5px 5px 0 5px;
       border-color: white transparent transparent transparent;
     }
+
     .dropdown-content a:hover {
       background-color: rgba(255, 255, 255, 0.1);
     }
+
     .logo-image {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    max-width: 200px;
-    margin-bottom: 0;
-  }
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      max-width: 200px;
+      margin-bottom: 0;
+    }
+
+    .content p.club-statement {
+      font-size: 20px;
+      margin-top: 150px;
+    }
+    .content p.statement {
+      font-size: 20px;
+      margin-top: 90px;
+    }
   </style>
 </head>
+
 <body>
   <div class="navbar">
-    <img src="https://nordatncsu.files.wordpress.com/2021/03/cropped-nord_logo_wtag_wide_web_rgb.png" alt="Image" class="logo-image" style="display: inline;">
+    <img src="https://nordatncsu.files.wordpress.com/2021/03/cropped-nord_logo_wtag_wide_web_rgb.png" alt="Image"
+      class="logo-image" style="display: inline;">
     <div class="dropdown">
       <button class="dropbtn">Menu &#9662;</button>
       <div class="dropdown-content">
@@ -157,3 +171,9 @@
   <div class="content">
     <h1>Our Mission</h1>
     <hr>
+    <p class="statement">NORD Mission statement: "Our goal is to..."</p>
+    <p class="club-statement">Our club mission statement: "This club will..."</p>
+   </div>
+  </div>
+</body>
+</html>
